@@ -36,6 +36,8 @@ module I18n::Tasks
         result.concat(reference_key_vals)
         result.sort! { |a, b| key_pos[a[0]] <=> key_pos[b[0]] }
         result
+      rescue
+        {}
       end
 
       # @param [Array<[String, Object]>] list of key-value pairs
